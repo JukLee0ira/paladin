@@ -2,7 +2,7 @@
 ARG JAVA_VERSION=21.0.4+7
 ARG NODE_VERSION=20.17.0
 ARG PROTO_VERSION=28.2
-ARG GO_VERSION=1.24.3
+ARG GO_VERSION=1.26.4
 ARG GO_MIGRATE_VERSION=4.18.3
 ARG GRADLE_VERSION=8.5
 ARG WASMER_VERSION=4.3.7
@@ -103,6 +103,7 @@ COPY common/go common/go
 COPY sdk/go sdk/go
 COPY toolkit/proto toolkit/proto
 COPY toolkit toolkit
+COPY third_party third_party
 COPY go.work.sum ./
 
 # We have to use a special minimal go.work for this

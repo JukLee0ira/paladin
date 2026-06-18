@@ -1,8 +1,8 @@
 module github.com/LFDT-Paladin/paladin/registries/static
 
-go 1.24.0
+go 1.26.0
 
-toolchain go1.24.3
+toolchain go1.26.4
 
 require (
 	github.com/LFDT-Paladin/paladin/common/go v0.0.0-00010101000000-000000000000
@@ -15,7 +15,6 @@ require (
 
 require (
 	github.com/LFDT-Paladin/paladin/config v0.0.0-00010101000000-000000000000 // indirect
-	github.com/aidarkhanov/nanoid v1.0.8 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect

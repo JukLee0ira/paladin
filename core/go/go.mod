@@ -1,8 +1,8 @@
 module github.com/LFDT-Paladin/paladin/core
 
-go 1.24.0
+go 1.26.0
 
-toolchain go1.24.3
+toolchain go1.26.4
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.2
@@ -35,7 +35,6 @@ require (
 )
 
 require (
-	github.com/aidarkhanov/nanoid v1.0.8 // indirect
 	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/rs/cors v1.11.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect

@@ -1,6 +1,6 @@
-go 1.24.0
+go 1.26.0
 
-toolchain go1.24.3
+toolchain go1.26.4
 
 use (
 	./common/go
@@ -20,3 +20,7 @@ use (
 	./toolkit/go
 	./transports/grpc
 )
+
+replace github.com/aidarkhanov/nanoid => ./third_party/aidarkhanov-nanoid
+
+replace github.com/tyler-smith/go-bip39 => github.com/cosmos/go-bip39 v1.0.0

@@ -16,7 +16,7 @@
 
 package pldtypes
 
-import "github.com/aidarkhanov/nanoid"
+import gonanoid "github.com/matoous/go-nanoid/v2"
 
 const (
 	// ShortIDalphabet is designed for easy double-click select
@@ -24,5 +24,9 @@ const (
 )
 
 func ShortID() string {
-	return nanoid.Must(nanoid.Generate(ShortIDalphabet, 8))
+	id, err := gonanoid.Generate(ShortIDalphabet, 8)
+	if err != nil {
+		panic(err)
+	}
+	return id
 }

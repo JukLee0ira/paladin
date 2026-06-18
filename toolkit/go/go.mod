@@ -1,8 +1,8 @@
 module github.com/LFDT-Paladin/paladin/toolkit
 
-go 1.24.0
+go 1.26.0
 
-toolchain go1.24.3
+toolchain go1.26.4
 
 require (
 	github.com/Code-Hex/go-generics-cache v1.5.1
@@ -28,7 +28,6 @@ require (
 )
 
 require (
-	github.com/aidarkhanov/nanoid v1.0.8 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/btcsuite/btcd/btcec/v2 v2.3.2 // indirect
 	github.com/btcsuite/btcd/chaincfg/chainhash v1.1.0 // indirect

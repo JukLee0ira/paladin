@@ -32,10 +32,11 @@ KIND_CLUSTER ?= kind
 
 # PLATFORMS defines the target platforms for cross-platform builds
 PLATFORMS ?= linux/arm64,linux/amd64,linux/s390x,linux/ppc64le
+NON_E2E_GO_PACKAGES = $(shell go list ./... | grep -v /test/e2e)
 
 # Tool Versions
 KUSTOMIZE_VERSION ?= v5.4.3
-CONTROLLER_TOOLS_VERSION ?= v0.16.3
+CONTROLLER_TOOLS_VERSION ?= v0.18.0
 ENVTEST_VERSION ?= release-0.22
 GOLANGCI_LINT_VERSION ?= v1.57.2
 
@@ -84,11 +85,11 @@ fmt: ## Run go fmt against code.
 
 .PHONY: vet
 vet: ## Run go vet against code.
-	go vet ./...
+	go vet $(NON_E2E_GO_PACKAGES)
 
 .PHONY: test
 test: manifests generate fmt vet envtest ## Run unit tests.
-	KUBEBUILDER_ASSETS="$(shell $(ENVTEST) use $(ENVTEST_K8S_VERSION) --bin-dir $(LOCALBIN) -p path)" go test $$(go list ./... | grep -v /e2e) -coverprofile cover.out
+	KUBEBUILDER_ASSETS="$(shell $(ENVTEST) use $(ENVTEST_K8S_VERSION) --bin-dir $(LOCALBIN) -p path)" go test $(NON_E2E_GO_PACKAGES) -coverprofile cover.out
 
 .PHONY: lint
 lint: golangci-lint ## Run linters (go and yaml).

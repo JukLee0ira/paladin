@@ -1,8 +1,8 @@
 module github.com/LFDT-Paladin/paladin/operator
 
-go 1.24.0
+go 1.26.0
 
-toolchain go1.24.3
+toolchain go1.26.4
 
 require (
 	github.com/LFDT-Paladin/paladin/common/go v0.0.0-00010101000000-000000000000
@@ -34,7 +34,6 @@ require (
 	github.com/Code-Hex/go-generics-cache v1.5.1 // indirect
 	github.com/Masterminds/goutils v1.1.1 // indirect
 	github.com/Masterminds/semver/v3 v3.3.0 // indirect
-	github.com/aidarkhanov/nanoid v1.0.8 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/btcsuite/btcd v0.24.2 // indirect
 	github.com/btcsuite/btcd/btcec/v2 v2.3.2 // indirect
@@ -81,6 +80,7 @@ require (
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
+	github.com/matoous/go-nanoid/v2 v2.1.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d // indirect
@@ -155,3 +155,7 @@ replace github.com/LFDT-Paladin/paladin/testinfra => ../testinfra
 replace github.com/LFDT-Paladin/paladin/sdk/go => ../sdk/go
 
 replace github.com/LFDT-Paladin/paladin/toolkit => ../toolkit/go
+
+replace github.com/tyler-smith/go-bip39 => github.com/cosmos/go-bip39 v1.0.0
+
+replace github.com/aidarkhanov/nanoid => ../third_party/aidarkhanov-nanoid

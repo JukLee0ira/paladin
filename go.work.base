@@ -1,4 +1,6 @@
-go 1.22.5
+go 1.26.0
+
+toolchain go1.26.4
 
 // this just contains what's needed for the base-builder in docker
 // By running this first, we get a big head start on the pre-reqs install
@@ -9,3 +11,7 @@ use (
 	./sdk/go
 	./toolkit/go
 )
+
+replace github.com/aidarkhanov/nanoid => ./third_party/aidarkhanov-nanoid
+
+replace github.com/tyler-smith/go-bip39 => github.com/cosmos/go-bip39 v1.0.0
